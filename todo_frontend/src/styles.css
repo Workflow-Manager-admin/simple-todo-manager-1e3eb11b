@@ -1,0 +1,18 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.todo-page-frame {
+  width: 414px;
+  height: 896px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  overflow-y: auto;
+  margin: 0 auto;
+  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  /* Layout styling for the main frame */
+}
+/* TODO: More styles for child elements will follow */
