@@ -1,18 +1,176 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
-.todo-page-frame {
+.page {
   width: 414px;
-  height: 896px;
-  box-sizing: border-box;
-  background: #fff;
+  min-height: 896px;
+  max-width: 100vw;
+  background: #d6d7ef; /* Figma light purple, or white for Add/Edit screens */
   position: relative;
-  overflow-y: auto;
+  font-family: 'Inter', Arial, sans-serif;
   margin: 0 auto;
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
-  /* Layout styling for the main frame */
+  box-sizing: border-box;
+  padding-bottom: 88px;
 }
-/* TODO: More styles for child elements will follow */
+
+/* background override for white pages */
+.add-todo-page, .edit-todo-page {
+  background: #fff;
+}
+
+.status-bar {
+  width: 100%;
+  height: 44px;
+  background: transparent;
+}
+
+.app-bar {
+  width: 100%;
+  height: 74px;
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-bar-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.todos-group, .completed-todos-group {
+  margin: 24px auto 16px auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todo-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(40, 40, 40, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.todo-item.completed {
+  background: #e5f9e7;
+}
+
+.todo-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3a405a;
+}
+
+.todo-desc {
+  font-size: 14px;
+  color: #8d8da9;
+}
+
+.fab-add-todo {
+  position: absolute;
+  right: 20px;
+  bottom: 90px;
+  width: 70px;
+  height: 70px;
+  background: #4950f6;
+  border-radius: 35px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 100;
+  transition: filter 0.1s;
+}
+.fab-add-todo:hover {
+  filter: brightness(0.92);
+}
+
+.navigation-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 68px;
+  background: #fff;
+  border-top: 1px solid #ececec;
+  left: 0;
+}
+
+.form-input {
+  display: block;
+  width: 86%;
+  margin: 0 auto 14px auto;
+  padding: 16px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #ececec;
+  font-size: 16px;
+  color: #444;
+}
+
+.primary-btn, .secondary-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  min-width: 170px;
+  max-width: 90%;
+  padding: 18px 0;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(80,80,80,0.09);
+  transition: background .12s, filter .12s;
+}
+
+.primary-btn {
+  background: #4950f6;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  filter: brightness(1.08);
+}
+
+.secondary-btn {
+  background: #fff;
+  color: #4950f6;
+  border: 1.5px solid #4950f6;
+}
+
+.secondary-btn:hover {
+  background: #f1f1ff;
+}
+
+.titles-group {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.titles-main {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 9px;
+}
+
+.titles-sub {
+  display: block;
+  font-size: 15px;
+  color: #888;
+}
+
+.edit-btns {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  justify-content: center;
+}
